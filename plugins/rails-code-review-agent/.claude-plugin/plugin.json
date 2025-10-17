@@ -13,10 +13,6 @@
     "security",
     "performance"
   ],
-  "categories": [
-    "agent",
-    "code-review"
-  ],
   "requirements": {
     "rails": ">=7.0.0",
     "ruby": ">=3.0.0"

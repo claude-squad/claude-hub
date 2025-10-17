@@ -14,10 +14,6 @@
     "testing",
     "forms"
   ],
-  "categories": [
-    "workflow",
-    "framework-integration"
-  ],
   "requirements": {
     "react": ">=18.0.0",
     "typescript": ">=5.0.0"

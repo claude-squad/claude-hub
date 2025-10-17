@@ -14,10 +14,6 @@
     "turbo",
     "hotwire"
   ],
-  "categories": [
-    "workflow",
-    "framework-integration"
-  ],
   "requirements": {
     "rails": ">=7.0.0",
     "ruby": ">=3.0.0"
