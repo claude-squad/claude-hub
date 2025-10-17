@@ -1,0 +1,24 @@
+{
+  "name": "react-typescript-code-review-agent",
+  "description": "Expert code review agent for React and TypeScript with focus on modern patterns, type safety, performance, and accessibility",
+  "version": "0.1.0",
+  "author": {
+    "name": "Claude Squad"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "code-review",
+    "agent",
+    "quality",
+    "accessibility"
+  ],
+  "categories": [
+    "agent",
+    "code-review"
+  ],
+  "requirements": {
+    "react": ">=18.0.0",
+    "typescript": ">=5.0.0"
+  }
+}

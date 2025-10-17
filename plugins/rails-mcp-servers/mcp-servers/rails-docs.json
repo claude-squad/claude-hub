@@ -1,0 +1,40 @@
+{
+  "name": "rails-docs",
+  "description": "Access to Rails framework documentation including guides, API docs, and best practices",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-rails"
+  ],
+  "env": {
+    "RAILS_VERSION": "7.1"
+  },
+  "capabilities": {
+    "resources": [
+      "rails-guides",
+      "rails-api-docs",
+      "active-record-docs",
+      "action-controller-docs",
+      "action-view-docs",
+      "turbo-docs",
+      "stimulus-docs",
+      "hotwire-docs",
+      "kamal-docs"
+    ],
+    "tools": [
+      "search_rails_docs",
+      "get_rails_guide",
+      "get_api_reference",
+      "find_rails_pattern"
+    ]
+  },
+  "metadata": {
+    "purpose": "Provides AI agents with access to official Rails documentation to reduce hallucination and ensure best practices",
+    "documentation": "https://github.com/modelcontextprotocol/servers/tree/main/src/rails",
+    "framework_versions": {
+      "rails": ">=7.0.0",
+      "turbo": ">=7.0.0",
+      "stimulus": ">=3.0.0"
+    }
+  }
+}

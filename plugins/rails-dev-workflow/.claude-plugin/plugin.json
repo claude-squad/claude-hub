@@ -1,0 +1,28 @@
+{
+  "name": "rails-dev-workflow",
+  "description": "Comprehensive Rails development workflow with specialized AI agents for models, controllers, views, services, tests, and devops. Inspired by claude-on-rails but using native Claude Code capabilities.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Claude Squad"
+  },
+  "keywords": [
+    "rails",
+    "ruby",
+    "workflow",
+    "agents",
+    "multi-agent",
+    "mvc",
+    "turbo",
+    "hotwire",
+    "full-stack"
+  ],
+  "categories": [
+    "workflow",
+    "framework-integration",
+    "agent"
+  ],
+  "requirements": {
+    "rails": ">=7.0.0",
+    "ruby": ">=3.0.0"
+  }
+}

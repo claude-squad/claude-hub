@@ -1,0 +1,57 @@
+{
+  "name": "claude-hub",
+  "description": "Claude Hub - A curated collection of high-quality Claude Code plugins for software development workflows",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Claude Squad",
+    "url": "https://github.com/claude-squad/claude-hub"
+  },
+  "plugins": [
+    {
+      "name": "rails-workflow",
+      "source": "./plugins/rails-workflow",
+      "description": "Complete workflow automation for Ruby on Rails development with model generation, controllers, Turbo Streams, service objects, RSpec setup, and API endpoints",
+      "version": "0.1.0",
+      "categories": ["workflow", "framework-integration"],
+      "keywords": ["rails", "ruby", "workflow", "automation", "mvc", "turbo", "hotwire"]
+    },
+    {
+      "name": "react-typescript-workflow",
+      "source": "./plugins/react-typescript-workflow",
+      "description": "Modern React and TypeScript development workflows with component generation, hooks, context, testing setup, form handling, and data fetching",
+      "version": "0.1.0",
+      "categories": ["workflow", "framework-integration"],
+      "keywords": ["react", "typescript", "workflow", "components", "hooks", "testing", "forms"]
+    },
+    {
+      "name": "rails-code-review-agent",
+      "source": "./plugins/rails-code-review-agent",
+      "description": "Specialized agent for reviewing Rails code with expertise in conventions, security, performance, and best practices enforcement",
+      "version": "0.1.0",
+      "categories": ["agent", "code-review"],
+      "keywords": ["rails", "code-review", "agent", "quality", "security", "performance"]
+    },
+    {
+      "name": "react-typescript-code-review-agent",
+      "source": "./plugins/react-typescript-code-review-agent",
+      "description": "Expert code review agent for React and TypeScript with focus on modern patterns, type safety, performance, and accessibility",
+      "version": "0.1.0",
+      "categories": ["agent", "code-review"],
+      "keywords": ["react", "typescript", "code-review", "agent", "quality", "accessibility"]
+    },
+    {
+      "name": "ui-ux-design-agent",
+      "source": "./plugins/ui-ux-design-agent",
+      "description": "Iterative UI/UX design and refinement specialist for creating accessible, responsive, and beautiful user interfaces",
+      "version": "0.1.0",
+      "categories": ["agent", "design"],
+      "keywords": ["ui", "ux", "design", "agent", "accessibility", "responsive", "iterative"]
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claude-squad/claude-hub.git"
+  },
+  "homepage": "https://github.com/claude-squad/claude-hub",
+  "license": "MIT"
+}
