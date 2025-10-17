@@ -9,49 +9,49 @@
   "plugins": [
     {
       "name": "rails-workflow",
-      "source": "./plugins/rails-workflow",
+      "source": "./plugins/claude-hub/rails-workflow",
       "description": "Complete workflow automation for Ruby on Rails development with model generation, controllers, Turbo Streams, service objects, RSpec setup, and API endpoints",
       "version": "0.1.0",
       "keywords": ["rails", "ruby", "workflow", "automation", "mvc", "turbo", "hotwire"]
     },
     {
       "name": "react-typescript-workflow",
-      "source": "./plugins/react-typescript-workflow",
+      "source": "./plugins/claude-hub/react-typescript-workflow",
       "description": "Modern React and TypeScript development workflows with component generation, hooks, context, testing setup, form handling, and data fetching",
       "version": "0.1.0",
       "keywords": ["react", "typescript", "workflow", "components", "hooks", "testing", "forms"]
     },
     {
       "name": "rails-code-review-agent",
-      "source": "./plugins/rails-code-review-agent",
+      "source": "./plugins/claude-hub/rails-code-review-agent",
       "description": "Specialized agent for reviewing Rails code with expertise in conventions, security, performance, and best practices enforcement",
       "version": "0.1.0",
       "keywords": ["rails", "code-review", "agent", "quality", "security", "performance"]
     },
     {
       "name": "react-typescript-code-review-agent",
-      "source": "./plugins/react-typescript-code-review-agent",
+      "source": "./plugins/claude-hub/react-typescript-code-review-agent",
       "description": "Expert code review agent for React and TypeScript with focus on modern patterns, type safety, performance, and accessibility",
       "version": "0.1.0",
       "keywords": ["react", "typescript", "code-review", "agent", "quality", "accessibility"]
     },
     {
       "name": "ui-ux-design-agent",
-      "source": "./plugins/ui-ux-design-agent",
+      "source": "./plugins/claude-hub/ui-ux-design-agent",
       "description": "Iterative UI/UX design and refinement specialist for creating accessible, responsive, and beautiful user interfaces",
       "version": "0.1.0",
       "keywords": ["ui", "ux", "design", "agent", "accessibility", "responsive", "iterative"]
     },
     {
       "name": "rails-dev-workflow",
-      "source": "./plugins/rails-dev-workflow",
+      "source": "./plugins/claude-hub/rails-dev-workflow",
       "description": "Comprehensive Rails development workflow with specialized AI agents for models, controllers, views, services, tests, and devops. Inspired by claude-on-rails but using native Claude Code capabilities.",
       "version": "0.1.0",
       "keywords": ["rails", "ruby", "workflow", "agents", "multi-agent", "mvc", "turbo", "hotwire", "full-stack"]
     },
     {
       "name": "rails-mcp-servers",
-      "source": "./plugins/rails-mcp-servers",
+      "source": "./plugins/claude-hub/rails-mcp-servers",
       "description": "MCP server configurations for Rails development providing access to Rails documentation, filesystem navigation, and Rails-specific tooling",
       "version": "0.1.0",
       "keywords": ["rails", "ruby", "mcp", "servers", "documentation", "filesystem"]
