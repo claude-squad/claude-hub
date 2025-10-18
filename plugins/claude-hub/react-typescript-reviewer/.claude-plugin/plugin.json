@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript-code-review-agent",
+  "name": "react-typescript-reviewer",
   "description": "Expert code review agent for React and TypeScript with focus on modern patterns, type safety, performance, and accessibility",
   "version": "0.1.0",
   "author": {

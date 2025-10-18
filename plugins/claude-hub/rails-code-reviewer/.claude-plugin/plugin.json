@@ -1,5 +1,5 @@
 {
-  "name": "rails-code-review-agent",
+  "name": "rails-code-reviewer",
   "description": "Specialized agent for reviewing Rails code with expertise in conventions, security, performance, and best practices enforcement",
   "version": "0.1.0",
   "author": {

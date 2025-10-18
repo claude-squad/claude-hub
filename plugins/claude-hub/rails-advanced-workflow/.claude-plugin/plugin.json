@@ -1,5 +1,5 @@
 {
-  "name": "rails-dev-workflow",
+  "name": "rails-advanced-workflow",
   "description": "Comprehensive Rails development workflow with specialized AI agents for models, controllers, views, services, tests, and devops. Inspired by claude-on-rails but using native Claude Code capabilities.",
   "version": "0.1.0",
   "author": {

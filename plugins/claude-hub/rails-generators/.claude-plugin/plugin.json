@@ -1,5 +1,5 @@
 {
-  "name": "rails-workflow",
+  "name": "rails-generators",
   "description": "Complete workflow automation for Ruby on Rails development with model generation, controllers, Turbo Streams, service objects, RSpec setup, and API endpoints",
   "version": "0.1.0",
   "author": {

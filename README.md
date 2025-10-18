@@ -10,8 +10,8 @@ Claude Hub provides a curated collection of Claude Code plugins that follow best
 
 ### Workflow Plugins
 
-#### Rails Workflow (`rails-workflow`)
-Complete workflow automation for Ruby on Rails development.
+#### Rails Generators (`rails-generators`)
+Basic Rails generation commands for models, controllers, and common patterns.
 
 **Features:**
 - Model generation with validations
@@ -22,7 +22,22 @@ Complete workflow automation for Ruby on Rails development.
 - API endpoint generation
 
 **Commands:** 6 slash commands
-**Installation:** `./scripts/install-plugin.sh rails-workflow /path/to/rails/project`
+**Installation:** `/plugin install rails-generators@claude-hub`
+
+---
+
+#### Rails Advanced Workflow (`rails-advanced-workflow`)
+Comprehensive Rails development with specialized AI agents for models, controllers, views, services, tests, and devops.
+
+**Features:**
+- 7 specialized agents for different Rails components
+- 3 workflow commands (start-dev, add-feature, refactor)
+- Multi-agent coordination
+- Full-stack Rails development support
+
+**Agents:** 7 specialized agents
+**Commands:** 3 workflow commands
+**Installation:** `/plugin install rails-advanced-workflow@claude-hub`
 
 ---
 
@@ -44,7 +59,7 @@ Modern React and TypeScript development workflows.
 
 ### Code Review Agents
 
-#### Rails Code Review Agent (`rails-code-review-agent`)
+#### Rails Code Reviewer (`rails-code-reviewer`)
 Specialized agent for reviewing Rails code with expertise in conventions and best practices.
 
 **Features:**
@@ -56,11 +71,11 @@ Specialized agent for reviewing Rails code with expertise in conventions and bes
 - Performance optimization suggestions
 
 **Agents:** 1 specialized agent
-**Installation:** `./scripts/install-plugin.sh rails-code-review-agent /path/to/rails/project`
+**Installation:** `/plugin install rails-code-reviewer@claude-hub`
 
 ---
 
-#### React TypeScript Code Review Agent (`react-typescript-code-review-agent`)
+#### React TypeScript Reviewer (`react-typescript-reviewer`)
 Expert code review for React and TypeScript applications.
 
 **Features:**
@@ -72,13 +87,13 @@ Expert code review for React and TypeScript applications.
 - Testing best practices
 
 **Agents:** 1 specialized agent
-**Installation:** `./scripts/install-plugin.sh react-typescript-code-review-agent /path/to/react/project`
+**Installation:** `/plugin install react-typescript-reviewer@claude-hub`
 
 ---
 
 ### Design Agents
 
-#### UI/UX Design Agent (`ui-ux-design-agent`)
+#### UI/UX Designer (`ui-ux-designer`)
 Iterative UI/UX design and refinement specialist.
 
 **Features:**
@@ -90,7 +105,7 @@ Iterative UI/UX design and refinement specialist.
 - Design system adherence
 
 **Agents:** 1 specialized agent
-**Installation:** `./scripts/install-plugin.sh ui-ux-design-agent /path/to/project`
+**Installation:** `/plugin install ui-ux-designer@claude-hub`
 
 ---
 
@@ -117,7 +132,7 @@ cd claude-hub
 /plugin
 
 # Or install directly:
-/plugin install rails-workflow@claude-hub
+/plugin install rails-generators@claude-hub
 ```
 
 ### Marketplace Setup
@@ -128,15 +143,15 @@ To use the Claude Hub plugin marketplace with Claude Code:
 2. The marketplace configuration is in `.claude-plugin/marketplace.json`
 3. Once configured, you can browse and install plugins using `/plugin`
 
-### Example: Installing Rails Workflow Plugin
+### Example: Installing Rails Generators Plugin
 
 ```bash
 # In your Rails project, open Claude Code
 cd ~/projects/my-rails-app
 claude
 
-# Install the Rails workflow plugin
-/plugin install rails-workflow@claude-hub
+# Install the Rails generators plugin
+/plugin install rails-generators@claude-hub
 
 # Use the commands
 /rails-generate-model User name:string email:string
@@ -235,12 +250,12 @@ See [docs/best-practices/PLUGIN_GUIDELINES.md](docs/best-practices/PLUGIN_GUIDEL
 ### 1. Workflow Automation
 Plugins that automate common development tasks through slash commands.
 
-**Examples:** rails-workflow, react-typescript-workflow
+**Examples:** rails-generators, rails-advanced-workflow, react-typescript-workflow
 
 ### 2. Code Review Agents
 Specialized AI agents that review code for quality, conventions, and best practices.
 
-**Examples:** rails-code-review-agent, react-typescript-code-review-agent
+**Examples:** rails-code-reviewer, react-typescript-reviewer
 
 ### 3. Framework Integrations
 Framework-specific tools and conventions.
@@ -250,7 +265,7 @@ Framework-specific tools and conventions.
 ### 4. Design & UX
 Plugins focused on UI/UX design and iterative refinement.
 
-**Examples:** ui-ux-design-agent
+**Examples:** ui-ux-designer
 
 ### 5. Developer Utilities
 General-purpose development tools and helpers.
@@ -298,11 +313,14 @@ We welcome contributions! To contribute:
 ```
 claude-hub/
 ├── plugins/                    # All plugins
-│   ├── rails-workflow/
-│   ├── react-typescript-workflow/
-│   ├── rails-code-review-agent/
-│   ├── react-typescript-code-review-agent/
-│   └── ui-ux-design-agent/
+│   └── claude-hub/            # Namespace
+│       ├── rails-generators/
+│       ├── rails-advanced-workflow/
+│       ├── react-typescript-workflow/
+│       ├── rails-code-reviewer/
+│       ├── react-typescript-reviewer/
+│       ├── ui-ux-designer/
+│       └── rails-mcp-servers/
 ├── shared/                     # Shared utilities
 │   ├── types/                  # TypeScript types
 │   └── utils/                  # Helper functions
@@ -360,11 +378,13 @@ See individual plugin READMEs for plugin-specific changes.
 
 ### v0.1.0 (Initial Release)
 
-- Rails Workflow plugin with 6 commands
+- Rails Generators plugin with 6 commands
+- Rails Advanced Workflow with 7 agents and 3 commands
 - React TypeScript Workflow plugin with 6 commands
-- Rails Code Review agent
-- React TypeScript Code Review agent
-- UI/UX Design agent
+- Rails Code Reviewer agent
+- React TypeScript Reviewer agent
+- UI/UX Designer agent
+- Rails MCP Servers for documentation and filesystem
 - Utility scripts for plugin management
 - Comprehensive documentation
 

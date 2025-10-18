@@ -8,52 +8,101 @@
   },
   "plugins": [
     {
-      "name": "rails-workflow",
-      "source": "./plugins/claude-hub/rails-workflow",
+      "name": "rails-generators",
+      "source": "./plugins/claude-hub/rails-generators",
       "description": "Complete workflow automation for Ruby on Rails development with model generation, controllers, Turbo Streams, service objects, RSpec setup, and API endpoints",
       "version": "0.1.0",
-      "keywords": ["rails", "ruby", "workflow", "automation", "mvc", "turbo", "hotwire"]
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/rails-generators",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "workflow",
+      "keywords": ["rails", "ruby", "workflow", "automation", "mvc", "turbo", "hotwire", "generators"]
     },
     {
       "name": "react-typescript-workflow",
       "source": "./plugins/claude-hub/react-typescript-workflow",
       "description": "Modern React and TypeScript development workflows with component generation, hooks, context, testing setup, form handling, and data fetching",
       "version": "0.1.0",
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/react-typescript-workflow",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "workflow",
       "keywords": ["react", "typescript", "workflow", "components", "hooks", "testing", "forms"]
     },
     {
-      "name": "rails-code-review-agent",
-      "source": "./plugins/claude-hub/rails-code-review-agent",
+      "name": "rails-code-reviewer",
+      "source": "./plugins/claude-hub/rails-code-reviewer",
       "description": "Specialized agent for reviewing Rails code with expertise in conventions, security, performance, and best practices enforcement",
       "version": "0.1.0",
-      "keywords": ["rails", "code-review", "agent", "quality", "security", "performance"]
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/rails-code-reviewer",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "code-review",
+      "keywords": ["rails", "code-review", "reviewer", "quality", "security", "performance"]
     },
     {
-      "name": "react-typescript-code-review-agent",
-      "source": "./plugins/claude-hub/react-typescript-code-review-agent",
+      "name": "react-typescript-reviewer",
+      "source": "./plugins/claude-hub/react-typescript-reviewer",
       "description": "Expert code review agent for React and TypeScript with focus on modern patterns, type safety, performance, and accessibility",
       "version": "0.1.0",
-      "keywords": ["react", "typescript", "code-review", "agent", "quality", "accessibility"]
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/react-typescript-reviewer",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "code-review",
+      "keywords": ["react", "typescript", "code-review", "reviewer", "quality", "accessibility"]
     },
     {
-      "name": "ui-ux-design-agent",
-      "source": "./plugins/claude-hub/ui-ux-design-agent",
+      "name": "ui-ux-designer",
+      "source": "./plugins/claude-hub/ui-ux-designer",
       "description": "Iterative UI/UX design and refinement specialist for creating accessible, responsive, and beautiful user interfaces",
       "version": "0.1.0",
-      "keywords": ["ui", "ux", "design", "agent", "accessibility", "responsive", "iterative"]
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/ui-ux-designer",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "design",
+      "keywords": ["ui", "ux", "design", "designer", "accessibility", "responsive", "iterative"]
     },
     {
-      "name": "rails-dev-workflow",
-      "source": "./plugins/claude-hub/rails-dev-workflow",
+      "name": "rails-advanced-workflow",
+      "source": "./plugins/claude-hub/rails-advanced-workflow",
       "description": "Comprehensive Rails development workflow with specialized AI agents for models, controllers, views, services, tests, and devops. Inspired by claude-on-rails but using native Claude Code capabilities.",
       "version": "0.1.0",
-      "keywords": ["rails", "ruby", "workflow", "agents", "multi-agent", "mvc", "turbo", "hotwire", "full-stack"]
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/rails-advanced-workflow",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "workflow",
+      "keywords": ["rails", "ruby", "workflow", "agents", "multi-agent", "mvc", "turbo", "hotwire", "full-stack", "advanced"]
     },
     {
       "name": "rails-mcp-servers",
       "source": "./plugins/claude-hub/rails-mcp-servers",
       "description": "MCP server configurations for Rails development providing access to Rails documentation, filesystem navigation, and Rails-specific tooling",
       "version": "0.1.0",
+      "author": {
+        "name": "Claude Squad"
+      },
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/rails-mcp-servers",
+      "repository": "https://github.com/claude-squad/claude-hub.git",
+      "license": "MIT",
+      "category": "tools",
       "keywords": ["rails", "ruby", "mcp", "servers", "documentation", "filesystem"]
     }
   ],
