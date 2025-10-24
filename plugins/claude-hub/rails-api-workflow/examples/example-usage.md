@@ -190,6 +190,7 @@ You: /rails-feature API v1 endpoints for posts
    - JSON response validation
 
 **Routes Created:**
+
 ```ruby
 namespace :api do
   namespace :v1 do
@@ -205,6 +206,7 @@ You: /rails-dev Add token-based authentication for the API
 ```
 
 **What Gets Added:**
+
 - API token generation for users
 - Token authentication in Api::V1::BaseController
 - Secure token handling
@@ -270,6 +272,7 @@ You: /rails-refactor Extract post publication logic to a service object
 **What the Architect Coordinates:**
 
 1. **rails-services** creates:
+
 ```ruby
 # app/services/posts/publish_service.rb
 module Posts
@@ -303,6 +306,7 @@ end
 ```
 
 2. **rails-controllers** updates:
+
 ```ruby
 # app/controllers/posts_controller.rb
 def publish
@@ -341,6 +345,7 @@ You: /rails-feature Real-time chat with rooms and messages using Turbo Streams
 **What the Architect Coordinates:**
 
 1. **rails-models** creates:
+
 ```ruby
 # app/models/chat_room.rb
 class ChatRoom < ApplicationRecord
@@ -370,6 +375,7 @@ end
 ```
 
 2. **rails-controllers** creates:
+
 ```ruby
 # app/controllers/messages_controller.rb
 class MessagesController < ApplicationController
@@ -390,6 +396,7 @@ end
 ```
 
 3. **rails-views** creates:
+
 ```erb
 <!-- app/views/chat_rooms/show.html.erb -->
 <%= turbo_stream_from @chat_room %>
@@ -509,6 +516,7 @@ You: /rails-feature Admin dashboard for managing posts and users
 Instead of: "Build a complete social media app"
 
 Do:
+
 1. `/rails-feature User profiles`
 2. `/rails-feature Posts with likes and shares`
 3. `/rails-feature Following system`
@@ -517,11 +525,13 @@ Do:
 ### 3. Iterate and Refine
 
 Initial implementation:
+
 ```
 /rails-feature User authentication
 ```
 
 Then enhance:
+
 ```
 /rails-dev Add two-factor authentication
 /rails-dev Add OAuth login with Google
@@ -531,6 +541,7 @@ Then enhance:
 ### 4. Review Generated Code
 
 The agents follow best practices, but always review:
+
 - Security implications
 - Performance considerations
 - Project-specific requirements
@@ -538,6 +549,7 @@ The agents follow best practices, but always review:
 ### 5. Leverage Multiple Commands
 
 Combine commands for workflows:
+
 ```
 /rails-feature Blog posts       # Create initial feature
 /rails-dev Add commenting       # Add related feature
@@ -561,6 +573,7 @@ If you encounter issues:
 ## Next Steps
 
 Explore the [README](../README.md) for:
+
 - Complete agent descriptions
 - Installation instructions
 - Rails conventions followed

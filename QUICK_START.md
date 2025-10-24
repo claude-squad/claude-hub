@@ -191,6 +191,7 @@ Just ask: "Review my React component" - The React/TypeScript code review agent w
 ## Troubleshooting
 
 ### Plugin not found?
+
 ```bash
 # Check marketplace is configured
 /plugin list
@@ -200,6 +201,7 @@ Just ask: "Review my React component" - The React/TypeScript code review agent w
 ```
 
 ### Commands not appearing?
+
 ```bash
 # Restart Claude Code
 # Then check available commands
@@ -207,6 +209,7 @@ Just ask: "Review my React component" - The React/TypeScript code review agent w
 ```
 
 ### Need help with a command?
+
 ```bash
 # Most commands have examples
 # Just use them with descriptive requests

@@ -21,6 +21,7 @@ Create a new Rails controller following RESTful conventions:
    - Edge cases
 
 RESTful actions to consider:
+
 - `index` - List all resources
 - `show` - Display a single resource
 - `new` - Form for creating a resource
@@ -30,6 +31,7 @@ RESTful actions to consider:
 - `destroy` - Delete a resource
 
 Controller best practices:
+
 - Keep actions thin, move logic to models or service objects
 - Use before_actions for common setup (e.g., `set_post`, authentication)
 - Respond to multiple formats (HTML, JSON, Turbo Stream)
@@ -37,6 +39,7 @@ Controller best practices:
 - Handle errors gracefully with proper HTTP status codes
 
 Example controller structure:
+
 ```ruby
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]

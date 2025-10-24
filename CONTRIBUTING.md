@@ -25,17 +25,20 @@ There are several ways to contribute:
 ### Setup Development Environment
 
 1. Fork and clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/claude-hub.git
 cd claude-hub
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Explore existing plugins:
+
 ```bash
 ./scripts/list-plugins.sh
 ```
@@ -173,6 +176,7 @@ Create practical examples in the `examples/` directory showing real-world usage.
 ### Step 8: Test Your Plugin
 
 1. Install to a test project:
+
 ```bash
 ./scripts/install-plugin.sh my-plugin /path/to/test/project
 ```
@@ -220,6 +224,7 @@ Create practical examples in the `examples/` directory showing real-world usage.
 1. **Fork the repository**
 
 2. **Create a feature branch**:
+
 ```bash
 git checkout -b feature/my-plugin
 ```
@@ -230,12 +235,14 @@ git checkout -b feature/my-plugin
    - Add examples
 
 4. **Validate your changes**:
+
 ```bash
 ./scripts/validate-plugin.sh my-plugin
 npm run lint
 ```
 
 5. **Commit with clear messages**:
+
 ```bash
 git commit -m "feat: Add my-plugin for X framework
 
@@ -245,6 +252,7 @@ git commit -m "feat: Add my-plugin for X framework
 ```
 
 6. **Push to your fork**:
+
 ```bash
 git push origin feature/my-plugin
 ```
@@ -268,6 +276,7 @@ Follow conventional commits:
 - `chore:` - Maintenance tasks
 
 Examples:
+
 ```
 feat: Add Python FastAPI workflow plugin
 fix: Correct Rails model validation command

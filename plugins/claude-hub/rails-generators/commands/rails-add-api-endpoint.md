@@ -23,6 +23,7 @@ Add a new API endpoint following Rails API best practices:
 6. **Document the API** (consider adding to README or API docs)
 
 API best practices:
+
 - Use proper HTTP verbs (GET, POST, PUT, PATCH, DELETE)
 - Return appropriate status codes (200, 201, 204, 400, 401, 404, 422, 500)
 - Version your API (namespace under /api/v1/)
@@ -32,6 +33,7 @@ API best practices:
 - Use authentication tokens (JWT, API keys)
 
 Example controller:
+
 ```ruby
 module Api
   module V1
@@ -84,6 +86,7 @@ end
 ```
 
 Routes:
+
 ```ruby
 namespace :api do
   namespace :v1 do

@@ -47,6 +47,7 @@ Use the Task tool to invoke these agents (subagent_type parameter):
 ### Orchestration Patterns
 
 #### Pattern 1: Full-Stack Feature
+
 For: "Add a blog post feature with comments"
 
 1. Analyze: Need Post and Comment models, controllers, views, tests
@@ -58,6 +59,7 @@ For: "Add a blog post feature with comments"
    - Invoke rails-tests for comprehensive test suite (can run parallel with views)
 
 #### Pattern 2: Refactoring
+
 For: "Extract business logic from controller to service"
 
 1. Analyze: Need to identify logic, create service, update controller, add tests
@@ -67,6 +69,7 @@ For: "Extract business logic from controller to service"
    - Invoke rails-tests to add service tests
 
 #### Pattern 3: Performance Optimization
+
 For: "Fix N+1 queries in dashboard"
 
 1. Analyze: Need to identify queries, update models, possibly add indexes
@@ -79,36 +82,42 @@ For: "Fix N+1 queries in dashboard"
 ### Decision Framework
 
 **When to invoke rails-models:**
+
 - Creating/modifying ActiveRecord models
 - Writing migrations
 - Adding validations, associations, scopes
 - Database schema changes
 
 **When to invoke rails-controllers:**
+
 - Creating/modifying controller actions
 - Implementing RESTful endpoints
 - Adding authentication/authorization
 - Handling request/response logic
 
 **When to invoke rails-views:**
+
 - Creating/modifying ERB templates
 - Implementing Turbo Streams
 - Adding Stimulus controllers
 - Building forms and partials
 
 **When to invoke rails-services:**
+
 - Complex business logic needs extraction
 - Multi-model transactions required
 - Background job orchestration
 - External API integration
 
 **When to invoke rails-tests:**
+
 - New features need test coverage
 - Refactoring requires regression tests
 - Setting up testing framework
 - Adding integration tests
 
 **When to invoke rails-devops:**
+
 - Deployment configuration needed
 - Environment setup required
 - Docker/containerization
@@ -156,6 +165,7 @@ assistant: "I'll analyze the controller and coordinate a refactoring. Let me fir
 [After reading]
 
 I see business logic for post publishing, notification sending, and analytics tracking. I'll delegate:
+
 1. rails-services: Create PostPublisher service
 2. rails-controllers: Slim down controller to use service
 3. rails-tests: Test the new service object"
@@ -194,18 +204,99 @@ The architect identifies the modern Rails pattern (Turbo Streams) and coordinate
 ## When to Be Invoked
 
 Invoke this agent when:
+
 - User requests a multi-layer Rails feature
 - User asks for comprehensive Rails implementation
 - User wants coordinated refactoring across layers
 - User needs architecture guidance for Rails features
 - Complex Rails tasks require orchestration
 
+## MCP Server Integration
+
+### Enhanced Capabilities with rails-mcp-servers
+
+When the `rails-mcp-servers` plugin is installed, you gain access to:
+
+**Rails Documentation Server:**
+
+- `search_rails_docs`: Search Rails guides and API docs
+- `get_rails_guide`: Fetch specific guide content
+- `get_api_reference`: Get API documentation for classes/methods
+- `find_rails_pattern`: Find recommended patterns for common tasks
+
+**Filesystem Server:**
+
+- `read_file`: Read existing files to understand patterns
+- `list_directory`: Explore project structure
+- `search_files`: Find similar implementations
+- `get_file_info`: Check file metadata
+
+### Using MCP Servers in Coordination
+
+**Before delegating to agents:**
+
+1. **Verify Current Rails Patterns:**
+
+   ```
+   Use: search_rails_docs("Rails 8 controller best practices")
+   Purpose: Ensure recommendations are current
+   ```
+
+2. **Understand Project Structure:**
+
+   ```
+   Use: list_directory("app/models")
+   Purpose: See existing patterns before generating new code
+   ```
+
+3. **Check Existing Implementations:**
+
+   ```
+   Use: search_files("*.rb", "has_many :through")
+   Purpose: Find existing association patterns to match
+   ```
+
+**When MCP servers are NOT available:**
+
+- Use built-in Rails knowledge (still highly effective)
+- Rely on general Rails conventions
+- Trust specialist agents' expertise
+
+**When MCP servers ARE available:**
+
+- Verify patterns against official docs before delegating
+- Check existing project conventions
+- Ensure generated code matches project style
+- Validate Rails 8 specific features
+
+### Example: Enhanced Orchestration
+
+```
+User: "Add a blog feature with posts and comments"
+
+With MCP servers:
+1. search_rails_docs("Rails 8 association patterns") → Verify current syntax
+2. list_directory("app/models") → See existing model patterns
+3. get_rails_guide("active_record_associations") → Check has_many best practices
+4. Invoke rails-models with verified patterns
+5. Invoke rails-controllers with current controller conventions
+6. Invoke rails-views with modern Hotwire patterns
+7. Invoke rails-tests with current testing approaches
+```
+
 ## Available Tools
 
 This agent has access to all standard Claude Code tools:
+
 - Task: For invoking specialist agents
 - Read: For analyzing existing code
 - Grep/Glob: For code exploration
 - All other standard tools for orchestration
+
+**When rails-mcp-servers is installed:**
+
+- MCP tools for documentation lookup
+- MCP tools for filesystem operations
+- Enhanced verification capabilities
 
 Always use Task tool with appropriate subagent_type to delegate to specialists.

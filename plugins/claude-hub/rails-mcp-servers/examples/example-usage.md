@@ -50,6 +50,7 @@ What would you like to know about Rails?"
 ### Example 1: Checking Current Rails Patterns
 
 **Without MCP Servers:**
+
 ```
 You: "What's the current syntax for has_many with counter cache?"
 
@@ -60,6 +61,7 @@ has_many :posts, counter_cache: true
 ```
 
 **With MCP Servers:**
+
 ```
 You: "What's the current syntax for has_many with counter cache in Rails 7.1?"
 
@@ -84,6 +86,7 @@ add_column :users, :posts_count, :integer, default: 0, null: false
 ### Example 2: Turbo Streams Best Practices
 
 **Without MCP Servers:**
+
 ```
 You: "How do I broadcast Turbo Stream updates?"
 
@@ -91,6 +94,7 @@ Claude: [Provides general answer based on training data]
 ```
 
 **With MCP Servers:**
+
 ```
 You: "How do I broadcast Turbo Stream updates in Rails 7.1?"
 
@@ -319,6 +323,7 @@ end
 ### Example 9: Error-Free Code Generation
 
 **Without MCP Servers:**
+
 ```
 You: "Add Turbo Stream support"
 
@@ -328,6 +333,7 @@ turbo_stream.replace "post_#{@post.id}", @post
 ```
 
 **With MCP Servers:**
+
 ```
 You: "Add Turbo Stream support"
 
@@ -424,6 +430,7 @@ MCP servers enhance Rails development by:
 4. **Intelligence**: Understanding of both framework and project conventions
 
 Install both plugins for best results:
+
 ```bash
 /plugin install rails-mcp-servers@claude-hub
 /plugin install rails-dev-workflow@claude-hub

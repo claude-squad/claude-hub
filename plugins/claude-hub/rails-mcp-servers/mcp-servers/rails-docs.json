@@ -7,7 +7,7 @@
     "@modelcontextprotocol/server-rails"
   ],
   "env": {
-    "RAILS_VERSION": "7.1"
+    "RAILS_VERSION": "8.0"
   },
   "capabilities": {
     "resources": [
@@ -32,9 +32,20 @@
     "purpose": "Provides AI agents with access to official Rails documentation to reduce hallucination and ensure best practices",
     "documentation": "https://github.com/modelcontextprotocol/servers/tree/main/src/rails",
     "framework_versions": {
-      "rails": ">=7.0.0",
-      "turbo": ">=7.0.0",
+      "rails": ">=8.0.0",
+      "turbo": ">=8.0.0",
       "stimulus": ">=3.0.0"
-    }
+    },
+    "rails_8_features": [
+      "solid_queue",
+      "solid_cache",
+      "solid_cable",
+      "authentication_generator",
+      "job_continuations",
+      "structured_events",
+      "normalizes",
+      "encrypts",
+      "select_count"
+    ]
   }
 }

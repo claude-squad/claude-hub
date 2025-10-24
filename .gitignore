@@ -32,6 +32,9 @@ Thumbs.db
 logs/
 *.log
 
+# Internal development documentation
+.dev/
+
 # Keep example configs
 !plugins/**/examples/**/*.js
 !plugins/**/templates/**/*.js

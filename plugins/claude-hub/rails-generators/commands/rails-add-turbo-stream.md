@@ -13,6 +13,7 @@ Enhance a controller action with Turbo Stream support for dynamic, real-time upd
 5. **Test the Turbo Stream response** in controller tests
 
 Turbo Stream actions available:
+
 - `append` - Add content to the end of a container
 - `prepend` - Add content to the beginning of a container
 - `replace` - Replace an element entirely
@@ -22,6 +23,7 @@ Turbo Stream actions available:
 - `after` - Insert content after an element
 
 Best practices:
+
 - Use Turbo Frames for independent page sections
 - Use Turbo Streams for lists and dynamic updates
 - Broadcast updates for real-time features using Action Cable
@@ -29,6 +31,7 @@ Best practices:
 - Handle both success and error states
 
 Example implementation:
+
 ```ruby
 # Controller
 def create

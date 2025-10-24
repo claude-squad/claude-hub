@@ -12,12 +12,14 @@ This guide explains how to install and use Claude Hub plugins with Claude Code.
 ### Method 1: Interactive Plugin Menu (Recommended)
 
 1. Open Claude Code in your project:
+
 ```bash
 cd your-project
 claude
 ```
 
 2. Open the plugin menu:
+
 ```
 /plugin
 ```
@@ -50,11 +52,13 @@ Before you can install Claude Hub plugins, you need to configure the marketplace
 ### Option 1: Via Git Repository
 
 1. Clone the Claude Hub repository:
+
 ```bash
 git clone https://github.com/yourusername/claude-hub.git
 ```
 
 2. Configure Claude Code to use the local marketplace:
+
 ```bash
 # Point to the cloned repository
 # The marketplace.json is in .claude-plugin/marketplace.json
@@ -63,6 +67,7 @@ git clone https://github.com/yourusername/claude-hub.git
 ### Option 2: Via Remote URL
 
 Configure Claude Code to use the remote marketplace directly:
+
 ```bash
 # Use GitHub raw URL or your hosted marketplace URL
 ```
@@ -98,6 +103,7 @@ Configure Claude Code to use the remote marketplace directly:
 After installation, workflow plugins provide slash commands:
 
 **Rails Workflow:**
+
 ```bash
 /rails-generate-model User name:string email:string
 /rails-generate-controller Posts index show create
@@ -108,6 +114,7 @@ After installation, workflow plugins provide slash commands:
 ```
 
 **React TypeScript Workflow:**
+
 ```bash
 /react-create-component Button
 /react-create-hook useApi
@@ -122,26 +129,32 @@ After installation, workflow plugins provide slash commands:
 Agent plugins are automatically available and can be invoked:
 
 **Rails Code Review Agent:**
+
 - Automatically invoked when reviewing Rails code
 - Manually invoke: "Review my Rails code"
 
 **React TypeScript Code Review Agent:**
+
 - Automatically invoked when reviewing React/TypeScript code
 - Manually invoke: "Review my React component"
 
 **UI/UX Design Agent:**
+
 - Invoke for design tasks: "Help me design a dashboard"
 - Iterative refinement: "Improve the spacing in this layout"
 
 ## Verifying Installation
 
 1. Check if commands are available:
+
 ```bash
 /help
 ```
+
 This should show all installed plugin commands.
 
 2. Test a command:
+
 ```bash
 # For Rails projects
 /rails-generate-model Test name:string
@@ -181,11 +194,13 @@ If an agent doesn't respond:
 To update to the latest version:
 
 1. Uninstall the old version:
+
 ```bash
 /plugin uninstall plugin-name@claude-hub
 ```
 
 2. Install the new version:
+
 ```bash
 /plugin install plugin-name@claude-hub
 ```

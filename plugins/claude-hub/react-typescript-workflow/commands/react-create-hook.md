@@ -21,6 +21,7 @@ Create a custom React hook following best practices:
 5. **Export from barrel** if using index files
 
 Hook patterns to consider:
+
 - State management hooks
 - Data fetching hooks
 - Event listener hooks
@@ -29,6 +30,7 @@ Hook patterns to consider:
 - Animation hooks
 
 Example hook structure:
+
 ```typescript
 import { useState, useEffect, useCallback } from 'react';
 
@@ -89,6 +91,7 @@ export const useApi = <T,>({
 ```
 
 Best practices:
+
 - Start hook names with "use"
 - Return stable references with useCallback/useMemo
 - Handle cleanup in useEffect

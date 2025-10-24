@@ -46,6 +46,7 @@ A complete feature includes:
 User: "/rails-feature Post with comments"
 
 Invoke architect with:
+
 ```
 Task tool:
 subagent_type: "general-purpose"
@@ -69,12 +70,14 @@ prompt: "As rails-architect, generate a complete Post feature with commenting fu
 
 Follow Rails conventions and modern Hotwire patterns."
 ```
+
 </example>
 
 <example>
 User: "/rails-feature User authentication"
 
 Invoke architect with:
+
 ```
 Task tool:
 subagent_type: "general-purpose"
@@ -99,12 +102,14 @@ prompt: "As rails-architect, implement user authentication:
 
 Recommend Devise or provide custom implementation based on project needs."
 ```
+
 </example>
 
 <example>
 User: "/rails-feature API endpoints for posts"
 
 Invoke architect with:
+
 ```
 Task tool:
 subagent_type: "general-purpose"
@@ -127,11 +132,13 @@ prompt: "As rails-architect, create versioned API endpoints for posts:
 
 Follow JSON:API or similar standards."
 ```
+
 </example>
 
 ## Feature Templates
 
 ### CRUD Feature
+
 ```
 - Model with validations and associations
 - RESTful controller (index, show, new, create, edit, update, destroy)
@@ -143,6 +150,7 @@ Follow JSON:API or similar standards."
 ```
 
 ### Nested Resource Feature
+
 ```
 - Parent and child models
 - Nested routes
@@ -153,6 +161,7 @@ Follow JSON:API or similar standards."
 ```
 
 ### API Feature
+
 ```
 - API namespace (Api::V1)
 - API controllers with JSON responses
@@ -164,6 +173,7 @@ Follow JSON:API or similar standards."
 ```
 
 ### Real-time Feature
+
 ```
 - Models with relationships
 - Controllers with Turbo Stream responses

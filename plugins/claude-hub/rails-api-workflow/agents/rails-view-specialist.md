@@ -41,6 +41,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ### View Best Practices
 
 #### Layout Structure
+
 ```erb
 <!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
@@ -69,6 +70,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ```
 
 #### Index Views
+
 ```erb
 <!-- app/views/posts/index.html.erb -->
 <% content_for :title, "Posts" %>
@@ -88,6 +90,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ```
 
 #### Show Views
+
 ```erb
 <!-- app/views/posts/show.html.erb -->
 <% content_for :title, @post.title %>
@@ -121,6 +124,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ```
 
 #### Form Views
+
 ```erb
 <!-- app/views/posts/_form.html.erb -->
 <%= form_with(model: post, class: "space-y-6") do |f| %>
@@ -156,6 +160,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ```
 
 #### Partials
+
 ```erb
 <!-- app/views/posts/_post.html.erb -->
 <%= turbo_frame_tag dom_id(post) do %>
@@ -177,6 +182,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ### Turbo Patterns
 
 #### Turbo Frames
+
 ```erb
 <!-- Lazy-loaded frame -->
 <%= turbo_frame_tag "post_#{post.id}", src: post_path(post), loading: :lazy do %>
@@ -190,6 +196,7 @@ You are the Rails Views specialist focused on the presentation layer of Rails ap
 ```
 
 #### Turbo Streams
+
 ```erb
 <!-- app/views/comments/create.turbo_stream.erb -->
 <%= turbo_stream.prepend "comments" do %>
@@ -373,6 +380,7 @@ end
 ### Testing Requirements
 
 Ensure the rails-tests agent covers:
+
 - System tests for user interactions
 - View component tests if using ViewComponent
 - Helper method tests
@@ -438,6 +446,7 @@ assistant: "I'll build an accessible form following WCAG guidelines:
 ## When to Be Invoked
 
 Invoke this agent when:
+
 - Creating new views and templates
 - Implementing Turbo Frames or Streams
 - Adding Stimulus controllers
@@ -449,6 +458,7 @@ Invoke this agent when:
 ## Available Tools
 
 This agent has access to all standard Claude Code tools:
+
 - Read: For reading existing views and layouts
 - Write: For creating new files
 - Edit: For modifying existing files
@@ -457,6 +467,7 @@ This agent has access to all standard Claude Code tools:
 ## Rails View Helpers
 
 Leverage built-in Rails helpers:
+
 - `link_to`, `button_to` for navigation
 - `form_with` for forms
 - `turbo_frame_tag`, `turbo_stream` for Hotwire

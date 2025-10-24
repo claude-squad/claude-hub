@@ -4,10 +4,18 @@ MCP (Model Context Protocol) server configurations for Rails development, provid
 
 ## Overview
 
-This plugin configures MCP servers that give Claude Code agents enhanced capabilities when working with Rails projects:
+Foundation infrastructure for Rails development in Claude Code. This plugin provides MCP servers that give AI agents enhanced capabilities:
 
-- **rails-docs**: Access to official Rails documentation, guides, and API references
+- **rails-docs**: Access to official Rails 8 documentation, guides, and API references
 - **filesystem**: Safe, scoped filesystem operations for Rails project structure
+
+**Works Standalone or with Workflow Plugins:**
+
+- ✅ Use independently for general Rails assistance
+- ✅ Enhances `rails-api-workflow` agents
+- ✅ Improves `rails-generators` accuracy
+- ✅ Helps `rails-code-reviewer` verify patterns
+- ✅ Can be used by any Rails plugin
 
 ## What are MCP Servers?
 
@@ -45,6 +53,7 @@ cp -r path/to/claude-hub/plugins/rails-mcp-servers/mcp-servers <your-rails-proje
 **Purpose**: Provides access to official Rails documentation
 
 **Capabilities:**
+
 - Search Rails guides
 - Get API documentation
 - Find Rails patterns and best practices
@@ -52,6 +61,7 @@ cp -r path/to/claude-hub/plugins/rails-mcp-servers/mcp-servers <your-rails-proje
 - Kamal deployment documentation
 
 **Resources Available:**
+
 - Rails Guides (Getting Started, Active Record, etc.)
 - API Documentation (full Rails API)
 - Active Record docs
@@ -63,12 +73,14 @@ cp -r path/to/claude-hub/plugins/rails-mcp-servers/mcp-servers <your-rails-proje
 - Kamal deployment docs
 
 **Tools Provided:**
+
 - `search_rails_docs` - Search across all documentation
 - `get_rails_guide` - Fetch specific guide content
 - `get_api_reference` - Get API documentation for classes/methods
 - `find_rails_pattern` - Find recommended patterns for common tasks
 
 **Example Usage:**
+
 ```
 Agent can now query: "What's the Rails convention for naming controllers?"
 Instead of hallucinating, it fetches: Rails naming conventions guide
@@ -79,6 +91,7 @@ Instead of hallucinating, it fetches: Rails naming conventions guide
 **Purpose**: Safe filesystem operations scoped to Rails project
 
 **Capabilities:**
+
 - Read files in Rails directories
 - Write new files (migrations, models, controllers, etc.)
 - List directory contents
@@ -86,6 +99,7 @@ Instead of hallucinating, it fetches: Rails naming conventions guide
 - Get file metadata
 
 **Allowed Directories:**
+
 - `app/` - Application code
 - `config/` - Configuration
 - `db/` - Database schemas and migrations
@@ -94,12 +108,14 @@ Instead of hallucinating, it fetches: Rails naming conventions guide
 - `test/` - Minitest tests
 
 **Restricted Directories (for safety):**
+
 - `node_modules/` - Not accessible
 - `tmp/` - Not accessible
 - `log/` - Not accessible
 - `.git/` - Not accessible
 
 **Tools Provided:**
+
 - `read_file` - Read file contents
 - `write_file` - Create or update files
 - `list_directory` - List directory contents
@@ -110,13 +126,15 @@ Instead of hallucinating, it fetches: Rails naming conventions guide
 
 When you install this plugin, the Rails development agents (from `rails-dev-workflow` plugin) automatically gain access to these capabilities:
 
-### Without MCP Servers:
+### Without MCP Servers
+
 ```
 You: "Generate a Post model with associations"
 Agent: Creates model based on general Rails knowledge (may not be current)
 ```
 
-### With MCP Servers:
+### With MCP Servers
+
 ```
 You: "Generate a Post model with associations"
 Agent:
@@ -132,6 +150,7 @@ Agent:
 ### 1. Accurate Rails Patterns
 
 Agents verify their implementations against official documentation:
+
 - Current syntax and methods
 - Deprecated feature warnings
 - Best practices
@@ -140,6 +159,7 @@ Agents verify their implementations against official documentation:
 ### 2. Consistent Code Style
 
 Agents can read existing project files to match:
+
 - Naming conventions
 - Code organization
 - Test patterns
@@ -148,6 +168,7 @@ Agents can read existing project files to match:
 ### 3. Framework Version Awareness
 
 Documentation is version-specific:
+
 - Rails 7.1 features
 - Turbo 7.x patterns
 - Stimulus 3.x conventions
@@ -156,6 +177,7 @@ Documentation is version-specific:
 ### 4. Reduced Errors
 
 By checking documentation:
+
 - Correct method signatures
 - Valid options and parameters
 - Proper syntax
@@ -204,23 +226,54 @@ The filesystem server is automatically scoped to your Rails project root. You ca
 - **No Execution**: Cannot execute code, only read docs
 - **Official Sources**: Only fetches from official Rails documentation
 
-## Complementary Plugins
+## Works with Rails Plugins
 
-This MCP servers plugin works best with:
+This infrastructure plugin enhances multiple Rails plugins:
 
-### rails-dev-workflow
-The Rails development workflow plugin with specialized agents:
+### rails-api-workflow (Highly Recommended)
+
+Multi-agent Rails 8 API development workflow:
+
 ```bash
-/plugin install rails-dev-workflow@claude-hub
+/plugin install rails-api-workflow@claude-hub
 ```
 
-Agents in that plugin (rails-models, rails-controllers, etc.) automatically use these MCP servers for enhanced capabilities.
+**Enhanced capabilities when both installed:**
+
+- rails-architect: Verifies patterns before delegating
+- rails-models: Matches existing model patterns
+- rails-controllers: Uses current Rails 8 controller conventions
+- rails-services: Verifies Solid Queue and job patterns
+- rails-tests: Matches existing test structure
+
+### rails-generators
+
+Rails code generation commands:
+
+```bash
+/plugin install rails-generators@claude-hub
+```
+
+**With MCP servers:** Generators verify syntax against Rails 8 docs
+
+### rails-code-reviewer
+
+Rails code review agent:
+
+```bash
+/plugin install rails-code-reviewer@claude-hub
+```
+
+**With MCP servers:** Reviewer verifies recommendations against official docs
+
+**All plugins work independently** - MCP servers are an enhancement, not a requirement.
 
 ## Troubleshooting
 
 ### MCP Server Not Starting
 
 1. **Check Dependencies**:
+
    ```bash
    npm install -g @modelcontextprotocol/server-rails
    npm install -g @modelcontextprotocol/server-filesystem
@@ -346,6 +399,7 @@ npm install --save-dev @modelcontextprotocol/server-filesystem
 ## Contributing
 
 Improvements welcome:
+
 - Additional MCP servers for Rails tools
 - Enhanced documentation coverage
 - Better filesystem scoping rules
@@ -375,6 +429,7 @@ MIT License
 ## Support
 
 For issues:
+
 - Check MCP server logs
 - Verify NPM package installation
 - Review configuration files

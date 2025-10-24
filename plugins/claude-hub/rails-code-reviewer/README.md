@@ -5,6 +5,7 @@ A specialized Claude Code agent for automated Rails code review. This agent prov
 ## Installation
 
 1. Copy the `.claude` directory to your Rails project root:
+
 ```bash
 cp -r plugins/rails-code-review-agent/.claude /path/to/your/rails/project/
 ```
@@ -28,6 +29,7 @@ Simply ask Claude to review your Rails code:
 ### Automatic Invocation
 
 The agent can be configured to automatically review:
+
 - Before git commits
 - When certain files are modified
 - Before creating pull requests
@@ -35,6 +37,7 @@ The agent can be configured to automatically review:
 ## What the Agent Reviews
 
 ### Models
+
 - Validations and their correctness
 - Association configurations
 - Callback usage (identifying overuse)
@@ -44,6 +47,7 @@ The agent can be configured to automatically review:
 - Separation of business logic
 
 ### Controllers
+
 - Controller thickness (keeping them thin)
 - Strong parameters
 - Before actions
@@ -53,6 +57,7 @@ The agent can be configured to automatically review:
 - Response formats
 
 ### Views
+
 - Logic-free views
 - Proper partial usage
 - Helper methods
@@ -61,6 +66,7 @@ The agent can be configured to automatically review:
 - Accessibility
 
 ### Security
+
 - Mass assignment protection
 - SQL injection prevention
 - XSS vulnerabilities
@@ -69,6 +75,7 @@ The agent can be configured to automatically review:
 - Sensitive data exposure
 
 ### Performance
+
 - N+1 query detection
 - Database query efficiency
 - Missing indexes
@@ -76,6 +83,7 @@ The agent can be configured to automatically review:
 - Eager loading recommendations
 
 ### Testing
+
 - Test coverage
 - Test quality
 - Factory definitions
@@ -161,6 +169,7 @@ The agent enforces these Rails best practices:
 ### Example 1: Controller Review
 
 **Code:**
+
 ```ruby
 class PostsController < ApplicationController
   def index
@@ -173,6 +182,7 @@ end
 ```
 
 **Agent Feedback:**
+
 ```markdown
 ## Critical Issues
 - N+1 query detected in `app/controllers/posts_controller.rb:4`
@@ -186,6 +196,7 @@ end
 ### Example 2: Model Review
 
 **Code:**
+
 ```ruby
 class User < ApplicationRecord
   has_many :posts
@@ -194,6 +205,7 @@ end
 ```
 
 **Agent Feedback:**
+
 ```markdown
 ## Critical Issues
 - No validations defined for User model
@@ -232,5 +244,6 @@ MIT License - see LICENSE file
 ## Support
 
 For issues and questions:
+
 - GitHub Issues: [Create an issue]
 - Documentation: See `/docs/best-practices/`

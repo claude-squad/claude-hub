@@ -25,6 +25,7 @@ Configure RSpec as the testing framework for this Rails application:
 8. **Remove test/ directory** if present (ask first!)
 
 Configuration recommendations:
+
 ```ruby
 # spec/rails_helper.rb
 RSpec.configure do |config|
@@ -44,6 +45,7 @@ end
 ```
 
 Gems to add:
+
 ```ruby
 group :development, :test do
   gem 'rspec-rails'

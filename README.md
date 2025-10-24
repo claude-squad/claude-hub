@@ -11,9 +11,11 @@ Claude Hub provides a curated collection of Claude Code plugins that follow best
 ### Workflow Plugins
 
 #### Rails Generators (`rails-generators`)
+
 Basic Rails generation commands for models, controllers, and common patterns.
 
 **Features:**
+
 - Model generation with validations
 - Controller scaffolding with RESTful actions
 - Turbo Stream support
@@ -26,25 +28,30 @@ Basic Rails generation commands for models, controllers, and common patterns.
 
 ---
 
-#### Rails Advanced Workflow (`rails-advanced-workflow`)
-Comprehensive Rails development with specialized AI agents for models, controllers, views, services, tests, and devops.
+#### Rails API Workflow (`rails-api-workflow`)
+
+Comprehensive Rails 8 API development with specialized AI agents for models, controllers, services, tests, and devops. Optimized for modern API patterns with Solid Queue, authentication, and REST/JSON.
 
 **Features:**
-- 7 specialized agents for different Rails components
+
+- 7 specialized agents for Rails API components
 - 3 workflow commands (start-dev, add-feature, refactor)
 - Multi-agent coordination
-- Full-stack Rails development support
+- Rails 8 API development with Solid Queue
+- JWT authentication and rate limiting support
 
 **Agents:** 7 specialized agents
 **Commands:** 3 workflow commands
-**Installation:** `/plugin install rails-advanced-workflow@claude-hub`
+**Installation:** `/plugin install rails-api-workflow@claude-hub`
 
 ---
 
 #### React TypeScript Workflow (`react-typescript-workflow`)
+
 Modern React and TypeScript development workflows.
 
 **Features:**
+
 - Component generation with TypeScript
 - Custom hooks creation
 - Context/state management setup
@@ -60,9 +67,11 @@ Modern React and TypeScript development workflows.
 ### Code Review Agents
 
 #### Rails Code Reviewer (`rails-code-reviewer`)
+
 Specialized agent for reviewing Rails code with expertise in conventions and best practices.
 
 **Features:**
+
 - Rails convention enforcement
 - Model validation review
 - Controller best practices
@@ -76,9 +85,11 @@ Specialized agent for reviewing Rails code with expertise in conventions and bes
 ---
 
 #### React TypeScript Reviewer (`react-typescript-reviewer`)
+
 Expert code review for React and TypeScript applications.
 
 **Features:**
+
 - Modern React pattern enforcement
 - TypeScript strict type checking
 - Hook usage validation
@@ -94,9 +105,11 @@ Expert code review for React and TypeScript applications.
 ### Design Agents
 
 #### UI/UX Designer (`ui-ux-designer`)
+
 Iterative UI/UX design and refinement specialist.
 
 **Features:**
+
 - Component layout design
 - Responsive design implementation
 - Accessibility compliance
@@ -114,6 +127,7 @@ Iterative UI/UX design and refinement specialist.
 ### Installation
 
 1. Clone this repository:
+
 ```bash
 git clone https://github.com/yourusername/claude-hub.git
 cd claude-hub
@@ -122,11 +136,13 @@ cd claude-hub
 2. Configure the Claude Hub marketplace in Claude Code (see Marketplace Setup below)
 
 3. List available plugins:
+
 ```bash
 ./scripts/list-plugins.sh
 ```
 
 4. Install plugins via Claude Code:
+
 ```bash
 # In Claude Code, run:
 /plugin
@@ -196,11 +212,13 @@ Every plugin must have a `.claude-plugin/plugin.json` manifest:
 ### Creating a New Plugin
 
 1. Create plugin directory:
+
 ```bash
 mkdir -p plugins/my-plugin/.claude/{commands,agents}
 ```
 
 2. Add package.json:
+
 ```json
 {
   "name": "@claude-hub/my-plugin",
@@ -215,6 +233,7 @@ mkdir -p plugins/my-plugin/.claude/{commands,agents}
 4. Create README.md with usage instructions
 
 5. Validate your plugin:
+
 ```bash
 ./scripts/validate-plugin.sh my-plugin
 ```
@@ -222,6 +241,7 @@ mkdir -p plugins/my-plugin/.claude/{commands,agents}
 ### Plugin Development Guidelines
 
 See [docs/best-practices/PLUGIN_GUIDELINES.md](docs/best-practices/PLUGIN_GUIDELINES.md) for comprehensive guidelines on:
+
 - Command development
 - Agent creation
 - Best practices
@@ -231,16 +251,19 @@ See [docs/best-practices/PLUGIN_GUIDELINES.md](docs/best-practices/PLUGIN_GUIDEL
 ## Utilities
 
 ### List All Plugins
+
 ```bash
 ./scripts/list-plugins.sh
 ```
 
 ### Install a Plugin
+
 ```bash
 ./scripts/install-plugin.sh <plugin-name> <target-directory>
 ```
 
 ### Validate a Plugin
+
 ```bash
 ./scripts/validate-plugin.sh <plugin-name>
 ```
@@ -248,26 +271,31 @@ See [docs/best-practices/PLUGIN_GUIDELINES.md](docs/best-practices/PLUGIN_GUIDEL
 ## Plugin Categories
 
 ### 1. Workflow Automation
+
 Plugins that automate common development tasks through slash commands.
 
-**Examples:** rails-generators, rails-advanced-workflow, react-typescript-workflow
+**Examples:** rails-generators, rails-api-workflow, react-typescript-workflow
 
 ### 2. Code Review Agents
+
 Specialized AI agents that review code for quality, conventions, and best practices.
 
 **Examples:** rails-code-reviewer, react-typescript-reviewer
 
 ### 3. Framework Integrations
+
 Framework-specific tools and conventions.
 
 **Examples:** Rails plugins, React plugins
 
 ### 4. Design & UX
+
 Plugins focused on UI/UX design and iterative refinement.
 
 **Examples:** ui-ux-designer
 
 ### 5. Developer Utilities
+
 General-purpose development tools and helpers.
 
 ## Best Practices
@@ -315,7 +343,7 @@ claude-hub/
 ├── plugins/                    # All plugins
 │   └── claude-hub/            # Namespace
 │       ├── rails-generators/
-│       ├── rails-advanced-workflow/
+│       ├── rails-api-workflow/
 │       ├── react-typescript-workflow/
 │       ├── rails-code-reviewer/
 │       ├── react-typescript-reviewer/
@@ -391,6 +419,7 @@ See individual plugin READMEs for plugin-specific changes.
 ## Acknowledgments
 
 Thanks to:
+
 - Anthropic for Claude Code
 - The Rails community for Rails conventions
 - The React community for React patterns

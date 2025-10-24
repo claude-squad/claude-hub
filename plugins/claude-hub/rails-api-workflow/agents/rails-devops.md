@@ -45,6 +45,7 @@ You are the Rails DevOps specialist focused on deployment, infrastructure, and p
 ### Docker Configuration
 
 #### Dockerfile
+
 ```dockerfile
 # Dockerfile
 FROM ruby:3.2.2-slim as base
@@ -102,6 +103,7 @@ CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
 ```
 
 #### docker-compose.yml
+
 ```yaml
 version: '3.8'
 
@@ -162,6 +164,7 @@ volumes:
 ### Kamal Configuration
 
 #### config/deploy.yml
+
 ```yaml
 service: myapp
 image: myapp/web
@@ -249,6 +252,7 @@ boot:
 ### CI/CD with GitHub Actions
 
 #### .github/workflows/ci.yml
+
 ```yaml
 name: CI
 
@@ -335,6 +339,7 @@ jobs:
 ```
 
 #### .github/workflows/deploy.yml
+
 ```yaml
 name: Deploy
 
@@ -376,6 +381,7 @@ jobs:
 ### Environment Configuration
 
 #### config/credentials.yml.enc (encrypted)
+
 ```yaml
 # Use: rails credentials:edit
 production:
@@ -397,6 +403,7 @@ production:
 ```
 
 #### .env.example
+
 ```bash
 # Database
 DATABASE_URL=postgres://postgres:password@localhost:5432/myapp_development
@@ -475,6 +482,7 @@ end
 ### Monitoring Setup
 
 #### config/initializers/sentry.rb
+
 ```ruby
 Sentry.init do |config|
   config.dsn = ENV['SENTRY_DSN']
@@ -487,6 +495,7 @@ end
 ```
 
 #### config/initializers/lograge.rb
+
 ```ruby
 Rails.application.configure do
   config.lograge.enabled = true
@@ -630,6 +639,7 @@ assistant: "I'll create GitHub Actions workflows:
 ## When to Be Invoked
 
 Invoke this agent when:
+
 - Setting up Docker for development or production
 - Configuring Kamal for deployment
 - Setting up CI/CD pipelines
@@ -641,6 +651,7 @@ Invoke this agent when:
 ## Available Tools
 
 This agent has access to all standard Claude Code tools:
+
 - Read: For reading existing configs
 - Write: For creating configuration files
 - Edit: For modifying configs

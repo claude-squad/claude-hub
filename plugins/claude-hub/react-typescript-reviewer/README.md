@@ -5,6 +5,7 @@ A specialized Claude Code agent for automated React and TypeScript code review. 
 ## Installation
 
 1. Copy the `.claude` directory to your React project root:
+
 ```bash
 cp -r plugins/react-typescript-code-review-agent/.claude /path/to/your/react/project/
 ```
@@ -29,6 +30,7 @@ Simply ask Claude to review your React/TypeScript code:
 ### What the Agent Reviews
 
 ### React Patterns
+
 - Functional components over class components
 - Proper hook usage and dependencies
 - Component composition
@@ -37,6 +39,7 @@ Simply ask Claude to review your React/TypeScript code:
 - Memoization patterns
 
 ### TypeScript Quality
+
 - No `any` types (or justified usage)
 - Proper interface/type definitions
 - Generic usage
@@ -45,6 +48,7 @@ Simply ask Claude to review your React/TypeScript code:
 - Type safety in event handlers
 
 ### Component Structure
+
 - Single responsibility principle
 - Component size and complexity
 - Prop interface definitions
@@ -53,6 +57,7 @@ Simply ask Claude to review your React/TypeScript code:
 - File organization
 
 ### Hooks
+
 - Rules of Hooks compliance
 - Dependency array completeness
 - Custom hook design
@@ -61,6 +66,7 @@ Simply ask Claude to review your React/TypeScript code:
 - State management patterns
 
 ### Performance
+
 - Unnecessary re-renders
 - Memoization opportunities
 - Expensive computations
@@ -69,6 +75,7 @@ Simply ask Claude to review your React/TypeScript code:
 - Memory leaks
 
 ### Accessibility
+
 - Semantic HTML
 - ARIA attributes
 - Keyboard navigation
@@ -77,6 +84,7 @@ Simply ask Claude to review your React/TypeScript code:
 - Color contrast
 
 ### Testing
+
 - Test coverage
 - RTL best practices
 - Test quality
@@ -134,6 +142,7 @@ High-level assessment of your changes
 ### Example 1: Hook Dependency Issue
 
 **Code:**
+
 ```typescript
 useEffect(() => {
   fetchData(userId);
@@ -141,6 +150,7 @@ useEffect(() => {
 ```
 
 **Agent Feedback:**
+
 ```markdown
 ## Critical Issues
 - Missing dependency in useEffect at `src/components/User.tsx:15`
@@ -154,6 +164,7 @@ useEffect(() => {
 ### Example 2: TypeScript Any Usage
 
 **Code:**
+
 ```typescript
 interface Props {
   data: any; // Bad!
@@ -162,6 +173,7 @@ interface Props {
 ```
 
 **Agent Feedback:**
+
 ```markdown
 ## Type Safety Issues
 - Using `any` type for `data` prop at `src/components/Card.tsx:3`
@@ -175,6 +187,7 @@ interface Props {
 ### Example 3: Performance Issue
 
 **Code:**
+
 ```typescript
 function UserList({ users }) {
   return users.map(user => (
@@ -186,6 +199,7 @@ function UserList({ users }) {
 ```
 
 **Agent Feedback:**
+
 ```markdown
 ## Critical Issues
 - Using `Math.random()` as key at `src/components/UserList.tsx:3`
@@ -265,5 +279,6 @@ MIT License - see LICENSE file
 ## Support
 
 For issues and questions:
+
 - GitHub Issues: [Create an issue]
 - Documentation: See `/docs/best-practices/`

@@ -114,6 +114,7 @@ Structure your review as:
 ### When to Be Invoked
 
 Invoke this agent when:
+
 - User asks for Rails code review
 - User commits changes to Rails files
 - User asks about Rails best practices
@@ -123,6 +124,7 @@ Invoke this agent when:
 ## Available Tools
 
 This agent has access to all standard Claude Code tools including:
+
 - Read: For reading files
 - Grep: For searching code patterns
 - Glob: For finding related files

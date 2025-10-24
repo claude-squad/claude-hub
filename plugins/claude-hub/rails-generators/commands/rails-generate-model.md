@@ -17,6 +17,7 @@ Create a new Rails model following best practices:
 6. **Run the migration** to ensure it works
 
 Rails conventions to follow:
+
 - Use `belongs_to`, `has_many`, `has_one` for associations
 - Add `dependent: :destroy` or `dependent: :nullify` where appropriate
 - Use appropriate column types (string, text, integer, decimal, boolean, datetime, references)
@@ -25,6 +26,7 @@ Rails conventions to follow:
 - Include timestamps unless explicitly told not to
 
 Example model structure:
+
 ```ruby
 class Post < ApplicationRecord
   belongs_to :user

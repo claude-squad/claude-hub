@@ -5,6 +5,7 @@ A comprehensive Claude Code plugin for React and TypeScript development. This pl
 ## Installation
 
 1. Copy the `.claude` directory to your React project root:
+
 ```bash
 cp -r plugins/react-typescript-workflow/.claude /path/to/your/react/project/
 ```
@@ -16,14 +17,17 @@ cp -r plugins/react-typescript-workflow/.claude /path/to/your/react/project/
 ### Component Development
 
 #### `/react-create-component`
+
 Generate a new React functional component with TypeScript.
 
 **Example usage:**
+
 ```
 User: /react-create-component Button with onClick and variant props
 ```
 
 **Features:**
+
 - Functional components with TypeScript
 - Prop interfaces
 - JSDoc documentation
@@ -33,14 +37,17 @@ User: /react-create-component Button with onClick and variant props
 ### Custom Hooks
 
 #### `/react-create-hook`
+
 Create a custom React hook with proper TypeScript types.
 
 **Example usage:**
+
 ```
 User: /react-create-hook useLocalStorage for storing user preferences
 ```
 
 **Features:**
+
 - TypeScript generics
 - Proper dependency arrays
 - Cleanup logic
@@ -50,14 +57,17 @@ User: /react-create-hook useLocalStorage for storing user preferences
 ### State Management
 
 #### `/react-setup-context`
+
 Create a React Context with TypeScript for application state.
 
 **Example usage:**
+
 ```
 User: /react-setup-context for authentication state
 ```
 
 **Features:**
+
 - Type-safe context creation
 - Custom consumption hooks
 - Provider component
@@ -67,14 +77,17 @@ User: /react-setup-context for authentication state
 ### Testing
 
 #### `/react-setup-testing`
+
 Configure React Testing Library with TypeScript and utilities.
 
 **Example usage:**
+
 ```
 User: /react-setup-testing
 ```
 
 **Features:**
+
 - Testing Library setup
 - Custom render utilities
 - MSW configuration
@@ -84,14 +97,17 @@ User: /react-setup-testing
 ### Form Handling
 
 #### `/react-add-form-handling`
+
 Implement forms with React Hook Form and Zod validation.
 
 **Example usage:**
+
 ```
 User: /react-add-form-handling for user registration
 ```
 
 **Features:**
+
 - React Hook Form integration
 - Zod schema validation
 - TypeScript type inference
@@ -101,14 +117,17 @@ User: /react-add-form-handling for user registration
 ### Data Fetching
 
 #### `/react-add-data-fetching`
+
 Set up data fetching with React Query (TanStack Query).
 
 **Example usage:**
+
 ```
 User: /react-add-data-fetching for user management
 ```
 
 **Features:**
+
 - React Query setup
 - Typed API client
 - Query and mutation hooks
@@ -161,24 +180,28 @@ This plugin works best with:
 ## Patterns and Conventions
 
 ### Component Patterns
+
 - Functional components only
 - Props interfaces exported
 - Default props via destructuring
 - Composition over props drilling
 
 ### Hook Patterns
+
 - Prefix all hooks with "use"
 - Return stable references
 - Include cleanup logic
 - Document with JSDoc
 
 ### TypeScript Patterns
+
 - No implicit `any`
 - Use `interface` for props
 - Use `type` for unions/intersections
 - Infer types from schemas when possible
 
 ### Testing Patterns
+
 - Test behavior, not implementation
 - Use user-event for interactions
 - Query by accessibility roles
@@ -211,6 +234,7 @@ MIT License - see LICENSE file
 ## Support
 
 For issues and questions:
+
 - GitHub Issues: [Create an issue]
 - Documentation: See `/docs/best-practices/`
 

@@ -78,18 +78,18 @@
       "keywords": ["ui", "ux", "design", "designer", "accessibility", "responsive", "iterative"]
     },
     {
-      "name": "rails-advanced-workflow",
-      "source": "./plugins/claude-hub/rails-advanced-workflow",
-      "description": "Comprehensive Rails development workflow with specialized AI agents for models, controllers, views, services, tests, and devops. Inspired by claude-on-rails but using native Claude Code capabilities.",
+      "name": "rails-api-workflow",
+      "source": "./plugins/claude-hub/rails-api-workflow",
+      "description": "Comprehensive Rails API development workflow with specialized AI agents for models, controllers, services, tests, and devops. Optimized for Rails 8 API development with Solid Queue, authentication, and modern patterns.",
       "version": "0.1.0",
       "author": {
         "name": "Claude Squad"
       },
-      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/rails-advanced-workflow",
+      "homepage": "https://github.com/claude-squad/claude-hub/tree/main/plugins/claude-hub/rails-api-workflow",
       "repository": "https://github.com/claude-squad/claude-hub.git",
       "license": "MIT",
       "category": "workflow",
-      "keywords": ["rails", "ruby", "workflow", "agents", "multi-agent", "mvc", "turbo", "hotwire", "full-stack", "advanced"]
+      "keywords": ["rails", "ruby", "api", "workflow", "agents", "multi-agent", "rails-8", "solid-queue", "rest", "json"]
     },
     {
       "name": "rails-mcp-servers",

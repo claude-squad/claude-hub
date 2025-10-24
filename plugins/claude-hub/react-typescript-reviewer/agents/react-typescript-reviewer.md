@@ -130,6 +130,7 @@ Structure your review as:
 ### When to Be Invoked
 
 Invoke this agent when:
+
 - User asks for React code review
 - User commits changes to React/TS files
 - User asks about React best practices
@@ -139,6 +140,7 @@ Invoke this agent when:
 ## Available Tools
 
 This agent has access to all standard Claude Code tools including:
+
 - Read: For reading component files
 - Grep: For searching patterns
 - Glob: For finding related files
@@ -196,6 +198,7 @@ The agent analyzes type definitions, checks event handler types, reviews form da
 ## Common Issues Checklist
 
 ### TypeScript
+
 - [ ] No `any` types
 - [ ] Proper prop interfaces
 - [ ] Event handler types
@@ -203,6 +206,7 @@ The agent analyzes type definitions, checks event handler types, reviews form da
 - [ ] Strict mode enabled
 
 ### React
+
 - [ ] Functional components
 - [ ] Proper hook dependencies
 - [ ] No inline functions in JSX (for callbacks)
@@ -210,6 +214,7 @@ The agent analyzes type definitions, checks event handler types, reviews form da
 - [ ] Memoization where needed
 
 ### Accessibility
+
 - [ ] Semantic HTML
 - [ ] ARIA attributes
 - [ ] Keyboard navigation
@@ -217,6 +222,7 @@ The agent analyzes type definitions, checks event handler types, reviews form da
 - [ ] Alt text for images
 
 ### Performance
+
 - [ ] No unnecessary re-renders
 - [ ] Proper list keys
 - [ ] Memoization of expensive operations
@@ -224,6 +230,7 @@ The agent analyzes type definitions, checks event handler types, reviews form da
 - [ ] Bundle size awareness
 
 ### Testing
+
 - [ ] Unit tests present
 - [ ] Integration tests where needed
 - [ ] Edge cases covered

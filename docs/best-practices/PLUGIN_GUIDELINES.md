@@ -157,12 +157,14 @@ Explanation of why this approach was taken
 ### Agent Patterns
 
 **Code Review Agent Pattern**:
+
 - Define quality standards
 - Specify review checklist
 - Include framework-specific patterns
 - Provide actionable feedback format
 
 **Framework Agent Pattern**:
+
 - Enforce framework conventions
 - Detect anti-patterns
 - Suggest idiomatic solutions
@@ -232,6 +234,7 @@ Every plugin should include:
 ## Version Management
 
 Follow semantic versioning (semver):
+
 - **MAJOR**: Breaking changes
 - **MINOR**: New features, backward compatible
 - **PATCH**: Bug fixes
@@ -259,17 +262,21 @@ plugin-name/
 Plugins are installed via the Claude Code plugin system:
 
 1. **Interactive Menu**:
+
    ```bash
    /plugin
    ```
+
    Browse available plugins and install through a guided interface.
 
 2. **Direct Installation**:
+
    ```bash
    /plugin install plugin-name@marketplace-name
    ```
 
 3. **Management Commands**:
+
    ```bash
    /plugin enable plugin-name@marketplace-name
    /plugin disable plugin-name@marketplace-name

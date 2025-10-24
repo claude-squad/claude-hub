@@ -19,6 +19,7 @@ Create a new React component following modern React and TypeScript best practice
 7. **Update parent component** to use new component if needed
 
 Component structure to follow:
+
 ```typescript
 import React from 'react';
 
@@ -52,6 +53,7 @@ export const ComponentName: React.FC<ComponentNameProps> = ({
 ```
 
 Best practices to follow:
+
 - Use functional components with hooks
 - Export interfaces for reusability
 - Use const assertions for prop types

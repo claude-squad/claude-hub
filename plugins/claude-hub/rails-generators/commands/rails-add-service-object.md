@@ -14,12 +14,14 @@ Extract complex business logic into a well-structured service object:
 6. **Document the service** with clear comments
 
 Service object patterns:
+
 - Use for complex multi-step operations
 - Use when logic spans multiple models
 - Use for external API integrations
 - Use for complex validations or calculations
 
 Structure:
+
 ```ruby
 # app/services/post_publisher.rb
 class PostPublisher
@@ -68,6 +70,7 @@ end
 ```
 
 Usage in controller:
+
 ```ruby
 def publish
   result = PostPublisher.new(@post, current_user).call

@@ -5,6 +5,7 @@ A specialized Claude Code agent for iterative UI/UX design and refinement. This 
 ## Installation
 
 1. Copy the `.claude` directory to your project root:
+
 ```bash
 cp -r plugins/ui-ux-design-agent/.claude /path/to/your/project/
 ```
@@ -45,6 +46,7 @@ The UI/UX designer agent can be invoked for various design tasks:
 ## What the Agent Does
 
 ### Visual Design
+
 - Creates component layouts
 - Applies design principles
 - Implements color schemes
@@ -53,6 +55,7 @@ The UI/UX designer agent can be invoked for various design tasks:
 - Designs spacing systems
 
 ### User Experience
+
 - Optimizes user flows
 - Improves interaction patterns
 - Enhances usability
@@ -61,6 +64,7 @@ The UI/UX designer agent can be invoked for various design tasks:
 - Reduces cognitive load
 
 ### Accessibility
+
 - Ensures WCAG compliance
 - Designs for screen readers
 - Implements keyboard navigation
@@ -69,6 +73,7 @@ The UI/UX designer agent can be invoked for various design tasks:
 - Considers diverse abilities
 
 ### Responsive Design
+
 - Mobile-first approach
 - Breakpoint strategies
 - Fluid typography
@@ -77,6 +82,7 @@ The UI/UX designer agent can be invoked for various design tasks:
 - Cross-device consistency
 
 ### Iterative Refinement
+
 - Gathers visual feedback
 - Implements changes quickly
 - Tests variations
@@ -132,6 +138,7 @@ The agent applies these core principles:
 ## Features
 
 ### Layout & Structure
+
 - Grid systems (Flexbox, CSS Grid)
 - Component composition
 - Spacing systems
@@ -139,6 +146,7 @@ The agent applies these core principles:
 - Semantic HTML
 
 ### Typography
+
 - Font selection and pairing
 - Type scale systems
 - Line height optimization
@@ -146,6 +154,7 @@ The agent applies these core principles:
 - Responsive typography
 
 ### Color Design
+
 - Color palette creation
 - Contrast ratio compliance
 - Semantic color systems
@@ -153,6 +162,7 @@ The agent applies these core principles:
 - Accessibility validation
 
 ### Component Design
+
 - Buttons and inputs
 - Navigation patterns
 - Card layouts
@@ -161,6 +171,7 @@ The agent applies these core principles:
 - Error states
 
 ### Interactions
+
 - Hover states
 - Focus indicators
 - Click feedback
@@ -259,6 +270,7 @@ Works with:
 ## Integration with Screenshots
 
 The agent can:
+
 - Analyze provided screenshots
 - Compare before/after designs
 - Implement designs from mockups
@@ -301,12 +313,14 @@ MIT License - see LICENSE file
 ## Support
 
 For issues and questions:
+
 - GitHub Issues: [Create an issue]
 - Documentation: See `/docs/best-practices/`
 
 ## Examples Directory
 
 See the `examples/` directory for:
+
 - Dashboard designs
 - Form layouts
 - Navigation patterns

@@ -5,6 +5,7 @@ A comprehensive Claude Code plugin for Ruby on Rails development workflows. This
 ## Installation
 
 1. Copy the `.claude` directory to your Rails project root:
+
 ```bash
 cp -r plugins/rails-workflow/.claude /path/to/your/rails/project/
 ```
@@ -16,15 +17,18 @@ cp -r plugins/rails-workflow/.claude /path/to/your/rails/project/
 ### Model Generation
 
 #### `/rails-generate-model`
+
 Generate a new Rails model with migrations, validations, associations, and tests.
 
 **Example usage:**
+
 ```
 User: /rails-generate-model
 Claude: I'll help you create a new Rails model. What should I name it and what fields does it need?
 ```
 
 **Features:**
+
 - Automatic validation generation
 - Association setup
 - Index creation for foreign keys
@@ -34,14 +38,17 @@ Claude: I'll help you create a new Rails model. What should I name it and what f
 ### Controller Generation
 
 #### `/rails-generate-controller`
+
 Generate a RESTful Rails controller with actions, views, and tests.
 
 **Example usage:**
+
 ```
 User: /rails-generate-controller Posts index show new create edit update destroy
 ```
 
 **Features:**
+
 - RESTful action implementation
 - Strong parameters
 - Before actions
@@ -52,14 +59,17 @@ User: /rails-generate-controller Posts index show new create edit update destroy
 ### Turbo/Hotwire
 
 #### `/rails-add-turbo-stream`
+
 Add Turbo Stream functionality to controller actions for dynamic updates.
 
 **Example usage:**
+
 ```
 User: /rails-add-turbo-stream for the create action in PostsController
 ```
 
 **Features:**
+
 - Turbo Stream view generation
 - Multiple format support
 - Frame targeting
@@ -68,14 +78,17 @@ User: /rails-add-turbo-stream for the create action in PostsController
 ### Service Objects
 
 #### `/rails-add-service-object`
+
 Create service objects to encapsulate complex business logic.
 
 **Example usage:**
+
 ```
 User: /rails-add-service-object to handle post publishing logic
 ```
 
 **Features:**
+
 - Clear service object structure
 - Success/failure handling
 - Transaction support
@@ -84,14 +97,17 @@ User: /rails-add-service-object to handle post publishing logic
 ### Testing
 
 #### `/rails-setup-rspec`
+
 Configure RSpec testing framework with best practices.
 
 **Example usage:**
+
 ```
 User: /rails-setup-rspec
 ```
 
 **Features:**
+
 - RSpec installation
 - FactoryBot configuration
 - Shoulda Matchers setup
@@ -100,14 +116,17 @@ User: /rails-setup-rspec
 ### API Development
 
 #### `/rails-add-api-endpoint`
+
 Create JSON API endpoints following Rails API conventions.
 
 **Example usage:**
+
 ```
 User: /rails-add-api-endpoint for posts
 ```
 
 **Features:**
+
 - API versioning
 - JSON response formatting
 - Pagination support
@@ -170,5 +189,6 @@ MIT License - see LICENSE file
 ## Support
 
 For issues and questions:
+
 - GitHub Issues: [Create an issue]
 - Documentation: See `/docs/best-practices/`

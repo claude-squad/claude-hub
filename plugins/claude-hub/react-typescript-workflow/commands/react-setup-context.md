@@ -16,6 +16,7 @@ Set up a React Context with proper TypeScript types and best practices:
 8. **Document usage** with examples
 
 Context structure:
+
 ```typescript
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
@@ -75,6 +76,7 @@ export const useTheme = (): ThemeContextValue => {
 ```
 
 Best practices:
+
 - Create custom hook for context consumption
 - Throw error if context is undefined
 - Use meaningful names for context
@@ -85,6 +87,7 @@ Best practices:
 - Test provider and consumer separately
 
 Usage example:
+
 ```typescript
 // In App.tsx
 import { ThemeProvider } from './contexts/ThemeContext';

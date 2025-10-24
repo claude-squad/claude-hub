@@ -16,6 +16,7 @@ Set up efficient data fetching with React Query and TypeScript:
 8. **Add React Query DevTools** for development
 
 Query client setup:
+
 ```typescript
 // src/lib/queryClient.ts
 import { QueryClient } from '@tanstack/react-query';
@@ -32,6 +33,7 @@ export const queryClient = new QueryClient({
 ```
 
 App setup:
+
 ```typescript
 // src/App.tsx
 import { QueryClientProvider } from '@tanstack/react-query';
@@ -49,6 +51,7 @@ function App() {
 ```
 
 API client:
+
 ```typescript
 // src/api/users.ts
 export interface User {
@@ -105,6 +108,7 @@ export const userApi = {
 ```
 
 Query hooks:
+
 ```typescript
 // src/hooks/useUsers.ts
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -160,6 +164,7 @@ export const useDeleteUser = () => {
 ```
 
 Component usage:
+
 ```typescript
 // src/components/UserList.tsx
 import { useUsers, useCreateUser } from '../hooks/useUsers';
@@ -198,6 +203,7 @@ export const UserList: React.FC = () => {
 ```
 
 Best practices:
+
 - Use query keys consistently
 - Organize queries by domain
 - Handle loading and error states

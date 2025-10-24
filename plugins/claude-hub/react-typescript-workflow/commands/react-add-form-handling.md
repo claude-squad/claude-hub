@@ -19,6 +19,7 @@ Set up robust form handling with React Hook Form and Zod validation:
 7. **Add accessibility** attributes (aria-labels, error announcements)
 
 Form implementation:
+
 ```typescript
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -134,6 +135,7 @@ export const UserForm: React.FC<UserFormProps> = ({
 ```
 
 Best practices:
+
 - Use Zod for schema validation
 - Infer TypeScript types from schemas
 - Handle async validation if needed

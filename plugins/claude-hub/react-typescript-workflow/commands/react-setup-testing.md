@@ -21,6 +21,7 @@ Set up comprehensive testing infrastructure for React with TypeScript:
 8. **Update tsconfig** for test files
 
 Test setup file:
+
 ```typescript
 // src/test-utils/setup.ts
 import '@testing-library/jest-dom';
@@ -34,6 +35,7 @@ afterEach(() => {
 ```
 
 Test utilities:
+
 ```typescript
 // src/test-utils/index.tsx
 import React, { ReactElement } from 'react';
@@ -64,6 +66,7 @@ export { customRender as render };
 ```
 
 Example test:
+
 ```typescript
 // src/components/Button/Button.test.tsx
 import { describe, it, expect, vi } from 'vitest';
@@ -95,6 +98,7 @@ describe('Button', () => {
 ```
 
 Package.json scripts:
+
 ```json
 {
   "scripts": {
@@ -106,6 +110,7 @@ Package.json scripts:
 ```
 
 Testing best practices:
+
 - Test behavior, not implementation
 - Use user-event for simulating interactions
 - Query by accessibility roles

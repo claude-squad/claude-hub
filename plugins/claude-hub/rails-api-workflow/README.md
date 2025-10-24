@@ -6,21 +6,62 @@ A comprehensive Rails development plugin inspired by [claude-on-rails](https://g
 
 This plugin provides a team of specialized Rails agents that work together like a real development team.
 
-### Recommended: Install with MCP Servers
+### Highly Recommended: Install with MCP Servers
 
-For enhanced capabilities with access to Rails documentation and intelligent file operations, also install:
+**For significantly enhanced capabilities**, also install the MCP servers plugin:
 
 ```bash
 /plugin install rails-mcp-servers@claude-hub
 ```
 
-The MCP servers plugin provides agents with:
-- Access to official Rails 7.1 documentation
-- Turbo, Stimulus, and Hotwire documentation
-- Intelligent filesystem operations
-- Reduced hallucination through doc verification
+**What You Get with MCP Servers:**
 
-See [rails-mcp-servers](../rails-mcp-servers/README.md) for details.
+🚀 **Verification Against Official Docs**
+
+- Agents verify patterns against Rails 8 documentation before implementing
+- Ensures latest syntax and best practices
+- Reduces hallucination and outdated patterns
+
+🎯 **Project Pattern Matching**
+
+- Agents analyze your existing code to match your style
+- Consistent naming conventions across generated code
+- Matches your validation patterns, test structure, and service patterns
+
+⚡ **Enhanced Intelligence**
+
+- Real-time access to Rails 8, Turbo, Stimulus, and Hotwire docs
+- Filesystem operations to read and understand existing code
+- Pattern detection across your codebase
+
+**Example: With vs Without MCP Servers**
+
+**Without MCP servers:**
+
+```
+You: "Create a Post model"
+Agent: Creates model using general Rails knowledge
+```
+
+**With MCP servers:**
+
+```
+You: "Create a Post model"
+Agent:
+1. Checks Rails 8 model patterns in official docs
+2. Reads your existing User model to match validation style
+3. Verifies association syntax against current Rails docs
+4. Creates model matching your project's exact patterns
+```
+
+**All agents work fully without MCP servers** - they're an enhancement, not a requirement. But with MCP servers, you get:
+
+- ✅ Rails 8 specific features (encrypts, normalizes, Solid Queue)
+- ✅ Code matching your existing patterns
+- ✅ Verified against official documentation
+- ✅ Up-to-date syntax and conventions
+
+See [rails-mcp-servers](../rails-mcp-servers/README.md) for installation details.
 
 ## Specialized Agents
 
@@ -69,6 +110,7 @@ cp -r path/to/claude-hub/plugins/rails-dev-workflow/commands .
 Main entry point for Rails development. Analyzes your request and coordinates specialized agents.
 
 **Examples:**
+
 ```
 /rails-dev Add a blog feature with posts and comments
 /rails-dev Create user authentication
@@ -77,6 +119,7 @@ Main entry point for Rails development. Analyzes your request and coordinates sp
 ```
 
 **What it does:**
+
 - Analyzes your natural language request
 - Invokes the rails-architect agent
 - Coordinates multiple specialists as needed
@@ -87,6 +130,7 @@ Main entry point for Rails development. Analyzes your request and coordinates sp
 Generate a complete full-stack Rails feature with all layers implemented.
 
 **Examples:**
+
 ```
 /rails-feature Post with comments and tags
 /rails-feature User authentication with email confirmation
@@ -95,6 +139,7 @@ Generate a complete full-stack Rails feature with all layers implemented.
 ```
 
 **What it does:**
+
 - Creates models with migrations
 - Generates RESTful controllers
 - Builds views with Turbo support
@@ -106,6 +151,7 @@ Generate a complete full-stack Rails feature with all layers implemented.
 Coordinate refactoring across Rails application layers.
 
 **Examples:**
+
 ```
 /rails-refactor The posts controller has too much logic
 /rails-refactor Fix N+1 queries in the dashboard
@@ -114,6 +160,7 @@ Coordinate refactoring across Rails application layers.
 ```
 
 **What it does:**
+
 - Analyzes existing code
 - Identifies code smells
 - Extracts service objects
@@ -125,6 +172,7 @@ Coordinate refactoring across Rails application layers.
 ### rails-architect (Coordinator)
 
 The architect analyzes your requests and coordinates other agents. It:
+
 - Breaks down features into component tasks
 - Determines which specialists to involve
 - Sequences work when dependencies exist
@@ -137,6 +185,7 @@ You can also invoke specialized agents directly using the Task tool if you need 
 ### rails-models (Data Layer)
 
 Focuses on database design and ActiveRecord:
+
 - Database schema design
 - Safe, reversible migrations
 - Model validations and associations
@@ -144,6 +193,7 @@ Focuses on database design and ActiveRecord:
 - Database indexes for performance
 
 **Best for:**
+
 - Creating/modifying models
 - Writing migrations
 - Setting up associations
@@ -152,6 +202,7 @@ Focuses on database design and ActiveRecord:
 ### rails-controllers (HTTP Layer)
 
 Handles request/response logic:
+
 - RESTful controller actions
 - Strong parameters
 - Authorization
@@ -160,6 +211,7 @@ Handles request/response logic:
 - Turbo Stream responses
 
 **Best for:**
+
 - CRUD operations
 - API development
 - Request handling
@@ -168,6 +220,7 @@ Handles request/response logic:
 ### rails-views (Presentation Layer)
 
 Creates user interfaces:
+
 - ERB templates
 - Turbo Frames and Streams
 - Stimulus controllers
@@ -176,6 +229,7 @@ Creates user interfaces:
 - Modern Hotwire patterns
 
 **Best for:**
+
 - UI implementation
 - Real-time features
 - Interactive components
@@ -184,6 +238,7 @@ Creates user interfaces:
 ### rails-services (Business Logic)
 
 Extracts complex business logic:
+
 - Service objects
 - Multi-model operations
 - Transaction management
@@ -191,6 +246,7 @@ Extracts complex business logic:
 - Background job coordination
 
 **Best for:**
+
 - Fat controller refactoring
 - Complex workflows
 - Payment processing
@@ -199,6 +255,7 @@ Extracts complex business logic:
 ### rails-tests (Quality Assurance)
 
 Ensures comprehensive testing:
+
 - RSpec/Minitest setup
 - Model/controller/request specs
 - System tests
@@ -206,6 +263,7 @@ Ensures comprehensive testing:
 - Test coverage reporting
 
 **Best for:**
+
 - Setting up testing
 - Writing test coverage
 - Testing strategies
@@ -214,6 +272,7 @@ Ensures comprehensive testing:
 ### rails-devops (Deployment)
 
 Manages infrastructure:
+
 - Docker configuration
 - Kamal deployment
 - CI/CD pipelines
@@ -222,6 +281,7 @@ Manages infrastructure:
 - Database backups
 
 **Best for:**
+
 - Deployment setup
 - Docker configuration
 - CI/CD pipelines
@@ -313,6 +373,7 @@ Better: "Create a blog Post model with title (string, 255 chars), body (text), p
 ### 3. Trust the Architect
 
 The architect agent understands Rails conventions and will make good decisions about:
+
 - Database design
 - RESTful routing
 - Association configurations
@@ -321,6 +382,7 @@ The architect agent understands Rails conventions and will make good decisions a
 ### 4. Iterate
 
 You can refine features after initial generation:
+
 ```
 1. /rails-feature User authentication
 2. Review the implementation
@@ -378,6 +440,7 @@ Contributions are welcome! To improve this plugin:
 ## Roadmap
 
 Future enhancements:
+
 - [ ] Integration with Rails MCP server for documentation
 - [ ] Additional agents (rails-jobs, rails-mailers, rails-assets)
 - [ ] Custom agent configuration per project
@@ -397,6 +460,7 @@ Built for Claude Code by the Claude Squad.
 ## Support
 
 For issues and questions:
+
 - Check the [examples](./examples) directory
 - Review agent prompts in the [agents](./agents) directory
 - Open an issue on GitHub
